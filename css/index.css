@@ -1,0 +1,43 @@
+*{
+    border: 1px solid black;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    height: 50px;
+}
+section{
+    height: 500px;
+}
+footer{
+    height: 100px;
+}
+nav ul{
+    display: flex;
+    justify-content: right;
+    list-style-type: none; 
+}
+nav ul li{
+    margin-right: 20px;
+    font-size: 20px
+}
+header img{
+    height: 100px;
+    width: auto;
+}
+/*Modificaciones para visualizar en móviles*/
+@media (max-width: 768px){
+    header h1{
+        display: none;    
+    }
+    header{
+        justify-content: space-around;
+    }
+    nav ul{
+        justify-content: center;
+    }
+}
