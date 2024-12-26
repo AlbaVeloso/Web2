@@ -31,8 +31,9 @@ nav ul li a {
 .section1,.section2, .section3, .section4 {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .section1::before {
     content: "";
@@ -98,6 +99,13 @@ nav ul li a {
     z-index: 2;
     /* Asegurarse de que el texto se muestre sobre el fondo */
 }
+section p{
+    display: none;
+}
+section h3:hover+p {
+    display: block;
+}
+
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
     header h1 {

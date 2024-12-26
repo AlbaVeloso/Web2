@@ -28,10 +28,24 @@ button{
     padding: 10px;
     background-color: rgb(119, 209, 119);
 }
+label {
+    font-size: large;  
+    padding: 10px;  
+  }
+  input[type="date"] {
+    font-size: large;  
+    padding: 5px;    
+  }
 
-
-
-
+#msg{
+    font-size: 20px;
+    color: red;
+    display: none;
+}
+#botonlogo img{
+        width: 96px; 
+        height: auto;
+}
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
