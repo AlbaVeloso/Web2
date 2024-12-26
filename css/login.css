@@ -1,0 +1,47 @@
+body>div{
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+form{
+    border: 1px solid black;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    align-items: center;
+    padding: 10px;
+}
+form input{
+    font-size: 30px;
+    width: 80%;
+}
+button{
+    font-size: 15px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(119, 209, 119);
+}
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    body>div{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }    
+}
+.boton-texto:hover{
+  display: inline-block;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none; /* Eliminar el subrayado */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 18px;
+  
+}
