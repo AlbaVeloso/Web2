@@ -10,9 +10,9 @@ function validacionInput (){
     var txtPass=inputPass.value;
     var txtRePass=inputRePass.value;
     if(txtPass==txtRePass){
-        btnCrear.disable=false;
+        btnCrear.disabled=false;
         msg.style.display="none"
     }else{
-        btnCrear.disable=true;
+        btnCrear.disabled=true;
         msg.style.display="block"
         }}
