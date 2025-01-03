@@ -8,6 +8,8 @@ header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    padding: 10px;
 }
 .imgUser{
     height: 100%;
@@ -28,12 +30,15 @@ header>div {
 }
 aside{
     width: 30%;
+    border-right: 2px solid black;
 }
 .asideMovil{
     display: none;
 }
 .contenedorPrincipal{
     width: 70%;
+    padding: 20px;
+    overflow: auto;
 }
 main{
     display: flex;
@@ -50,7 +55,33 @@ aside i{
 }
 footer p{
     margin: 0;
+    border-top: 2px solid black;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  td i{
+    margin-left: 10px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
 
 
 /* Media queries para pantallas pequeñas */
