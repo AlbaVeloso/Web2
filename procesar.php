@@ -2,7 +2,7 @@
 $servidor = "localhost";  // El servidor donde está la base de datos
 $usuario = "root";        // El usuario de la base de datos
 $clave = "";              // La contraseña (si no tienes, déjalo vacío)
-$basededatos = "usuarios";  // El nombre de la base de datos
+$basededatos = "web2";  // El nombre de la base de datos
 
 // Crear la conexión
 $conn = mysqli_connect($servidor, $usuario, $clave, $basededatos);
