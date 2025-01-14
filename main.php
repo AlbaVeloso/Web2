@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(! isset($_SESSION["usuario"])){
+    header("Location: login.php");
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +24,7 @@
             <div id="menuUser" class="menuUser">
                 <ul>
                     <li><a href="">Datos de usuario</a></li>
-                    <li><a href="index.html">Cerrar sesión</a></li>
+                    <li><a href="cerrar_sesion.php">Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>

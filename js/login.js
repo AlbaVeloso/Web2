@@ -1,4 +1,4 @@
-var formulario = document.getElementById("formulario");
+/*var formulario = document.getElementById("formulario");
 formulario.onsubmit=function(e){
     e.preventDefault();
     var usuario=document.getElementById("usuario").value
@@ -9,3 +9,5 @@ formulario.onsubmit=function(e){
         alert("Usuario o contraseña incorrectos");
     }
 }
+
+*/

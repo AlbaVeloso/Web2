@@ -1,12 +1,34 @@
 <?php
-if(isset($_POST{"nombre"}) ){
-var_dump($_POST);
-exit();  
+if(isset($_POST["nombre"]) ){
+  include("conexiondb.php");
+  try {
+    // Preparar y ejecutar la consulta SQL
+    $sql = "INSERT INTO usuarios (nombre, apellidos, email, fecha, password) 
+            VALUES (:nombre, :apellidos, :email, :fecha, :password)";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bindParam(':nombre', $_POST["nombre"]);
+    $stmt->bindParam(':apellidos', $_POST["apellidos"]);
+    $stmt->bindParam(':email', $_POST["email"]);
+    $stmt->bindParam(':fecha', $_POST["fecha"]);
+    // Encriptar la contraseña antes de guardarla
+    $hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $stmt->bindParam(':password', $hashed_password);
+    //$stmt->bindParam(':password', $_POST["password"]);
+    $stmt->execute();
+
+    echo "Registro insertado exitosamente";
+
+    // Redirigir a la página de login   
+    header("Location: login.php");
+} catch (PDOException $e) {
+    echo "Conexión fallida: " . $e->getMessage();
+}
+
+
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +55,7 @@ exit();
             <span id="msg">*Las contraseñas deben ser iguales.</span>
             <button id="btnCrear" disabled>Crear usuario</button>
         </form> 
-        <p><a href="login.html">¿Ya tienes una cuenta?</a></p> 
+        <p><a href="login.php">¿Ya tienes una cuenta?</a></p> 
     </div>
     <script src="js/registro.js"></script>
 </body>

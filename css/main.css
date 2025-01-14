@@ -17,6 +17,7 @@ header{
 }
 .menuUser{
     display: none;
+    z-index: 1000;
     
 }
 .menuUser ul{
