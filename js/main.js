@@ -18,6 +18,7 @@ lista.onclick=function(){
         menuMovil.style.display="block"
     }
 }
+/*
 var papeleras=document.getElementsByClassName("fa-trash");
 for (let index = 0; index < papeleras.length; index++) {
     const element = papeleras[index];
@@ -27,9 +28,11 @@ for (let index = 0; index < papeleras.length; index++) {
         alert("Borrado con éxito");
     }
 }
+    */
 // Función para añadir la fecha de hoy en el input de fecha
 document.getElementById("fecha").valueAsDate = new Date();
 
+/*
 // Función para añadir una fila a la tabla a través del formulario
 var form = document.getElementById("formIncidencias");
 var tabla = document.getElementById("tbodyIncidencias");
@@ -83,7 +86,7 @@ function getNextId(idTabla) {
 
 console.log(getNextId());
 
-
+*/
 
 
 
